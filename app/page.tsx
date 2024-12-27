@@ -1,18 +1,19 @@
-import React from 'react';
-import Navbar from './components/navbar';
-import Hero from './components/hero'
-import Productsection from './components/Productsection';
+import React from "react";
+import Navbar from "./components/navbar";
+import Hero from "./components/hero";
+import Productsection from "./components/Productsection";
+import Inspiration from "./components/inspiration";
+import Footer from "./components/Footer";
 export default function HomePage() {
   return (
     <div>
-      {/* Navbar Component */}
       <Navbar />
-      
 
-      {/* Page Content */}
-      <main >
+      <main>
         <Hero />
         <Productsection />
+        <Inspiration />
+        <Footer />
       </main>
     </div>
   );
