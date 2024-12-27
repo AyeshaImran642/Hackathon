@@ -4,7 +4,9 @@ import React from 'react';
 import Navbar from '../components/navbar';
 import Image from 'next/image';
 import FeatureSection from '../components/featuresection';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
+// import Footer from '@components/Footer';
+
 
 const products = [
   { id: 1, name: "Syltherine", description: "Stylish cafe chair", price: "Rp 2.500.000", image: "/image 1.png" },
@@ -123,7 +125,7 @@ export default function Page() {
         ))}
       </div>
       <FeatureSection />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -3,7 +3,9 @@
 import React, { useState } from "react";
 import Navbar from "../../components/navbar";
 import Image from "next/image";
-import Footer from "../../components/Footer";
+// import Footer from '../../components/Footer';
+// import Footer from '@components/Footer';
+
 import Productsection from "../../components/Productsection";
 
 // Import icons
@@ -324,7 +326,7 @@ const ProductPage = ({ params }: { params: { productId: string } }) => {
       <div className="mt-12 md:mt-36">
         <Productsection />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

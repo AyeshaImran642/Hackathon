@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from '../components/navbar';
 import Image from 'next/image';
 import { FaLocationDot, FaPhone, FaClock } from "react-icons/fa6";
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 import Featuresection from '../components/featuresection';
 
 export default function Contact() {
@@ -130,7 +130,7 @@ export default function Contact() {
       </div>
       
       <Featuresection />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

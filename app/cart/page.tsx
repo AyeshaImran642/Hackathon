@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Navbar from '../components/navbar';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 import Image from 'next/image';
 
 export default function CartPage() {
@@ -46,7 +46,7 @@ export default function CartPage() {
         </div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
