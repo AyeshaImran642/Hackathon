@@ -32,7 +32,7 @@ export default function CartPage() {
               </tr>
             </thead>
             <tbody>
-              {/* Add your cart items here */}
+           
             </tbody>
           </table>
         </div>

@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState } from "react";
@@ -187,13 +186,19 @@ const ProductPage = ({ params }: { params: { productId: string } }) => {
 
           {/* Right: Product Details */}
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-800">{product.name}</h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
+              {product.name}
+            </h1>
             <p className="text-xl md:text-2xl text-gray-400 font-semibold mt-2">
               {product.price}
             </p>
             <div className="flex items-center mt-2 space-x-2">
-              <span className="text-yellow-500 text-3xl md:text-4xl">★★★★★</span>
-              <span className="text-base md:text-lg text-gray-500">5 Customer Reviews</span>
+              <span className="text-yellow-500 text-3xl md:text-4xl">
+                ★★★★★
+              </span>
+              <span className="text-base md:text-lg text-gray-500">
+                5 Customer Reviews
+              </span>
             </div>
             <p className="text-gray-600 mt-4">
               Setting the bar as one of the loudest speakers in its class, the
@@ -295,12 +300,14 @@ const ProductPage = ({ params }: { params: { productId: string } }) => {
           {/* Description Content */}
           <div className="mt-6">
             <p className="text-gray-700">
-              Embodying the raw, wayward spirit of rock 'n' roll, the Kilburn
-              portable active stereo speaker takes the unmistakable look and
-              sound of Marshall, unplugs the chords, and takes the show on the
-              road.
+             
+              Embodying the raw, wayward spirit of rock &apos;n&apos; roll, the
+              Kilburn portable active stereo speaker takes the unmistakable look
+              and sound of Marshall, unplugs the chords, and takes the show on
+              the road.
             </p>
             <p className="mt-4 text-gray-700">
+              
               Weighing in under 7 pounds, the Kilburn is a lightweight piece of
               vintage styled engineering. Setting the bar as one of the loudest
               speakers in its class, the Kilburn is a compact, stout-hearted
