@@ -1,27 +1,29 @@
 
 import React from 'react';
-import Navbar from '../components/navbar';
+import Navbar from '../../components/navbar';
 import Image from 'next/image';
 import { FaLocationDot, FaPhone, FaClock } from "react-icons/fa6";
-// import Footer from '../components/Footer';
-import Featuresection from '../components/featuresection';
+import Footer from '../../components/Footer';
+import Featuresection from '../../components/featuresection';
 
 export default function Contact() {
   return (
     <div>
-      {/* Navbar */}
       <Navbar />
-
-      {/* Header Image */}
-      <div className="w-full -mt-1 h-[316px]">
-        <Image
-          src="/contact image.png"
-          alt="Contact Header"
-          width={1440}
-          height={316}
-          className="w-full h-full object-cover"
-        />
-      </div>
+      <div className="relative w-full flex flex-col items-center">
+              <Image
+                src="/contact image.png"
+                alt="Contact Header"
+                width={1440}
+                height={316}
+                layout="responsive"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 flex flex-col items-center justify-center">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black">Contact</h1>
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black">Home &gt; Contact</p>
+              </div>
+            </div>
 
       {/* Contact Section */}
       <div className="bg-white py-16 px-8">
@@ -29,7 +31,10 @@ export default function Contact() {
           Get In Touch With Us
         </h2>
         <p className="text-center text-gray-600 mt-4 text-[16px] leading-[24px] font-poppins">
-          For More Information About Our Products & Services, Please Feel Free To Drop<br /> Us An Email. Our Staff Is Always Here To Help You Out. Do Not Hesitate!
+          For More Information About Our Products & Services, Please Feel Free
+          To Drop
+          <br /> Us An Email. Our Staff Is Always Here To Help You Out. Do Not
+          Hesitate!
         </p>
 
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -40,7 +45,8 @@ export default function Contact() {
               <div>
                 <h3 className="text-lg font-semibold">Address</h3>
                 <p className="text-gray-600">
-                  226 5th SE Avenue, New<br /> York NY10000, United States
+                  226 5th SE Avenue, New
+                  <br /> York NY10000, United States
                 </p>
               </div>
             </div>
@@ -72,7 +78,10 @@ export default function Contact() {
           <div>
             <form className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Your name
                 </label>
                 <input
@@ -84,7 +93,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Email address
                 </label>
                 <input
@@ -96,7 +108,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Subject
                 </label>
                 <input
@@ -108,7 +123,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Message
                 </label>
                 <textarea
@@ -121,16 +139,17 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="py-2 px-10 bg-[#B88E2F] text-white font-semibold shadow hover:bg-yellow-600">
+                className="py-2 px-10 bg-[#B88E2F] text-white font-semibold shadow hover:bg-yellow-600"
+              >
                 Submit
               </button>
             </form>
           </div>
         </div>
       </div>
-      
+
       <Featuresection />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

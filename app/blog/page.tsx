@@ -1,28 +1,36 @@
-
-import Navbar from "../components/navbar";
+import Navbar from "@/components/navbar";
 import Image from "next/image";
 import React from "react";
 
 export default function BlogPage() {
   return (
     <div>
-      {/* Navbar */}
       <Navbar />
-      <div className="w-full flex flex-col items-center -mt-32">
+      {/* Header Section */}
+      <div className="relative w-full flex flex-col items-center">
         <Image
           src="/contact image.png"
           alt="Contact Header"
           width={1440}
           height={316}
-          className="w-full h-full object-cover"
+          layout="responsive"
+          className="object-cover w-full"
         />
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black">
+            Blog
+          </h1>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black">
+            Home &gt; Blog
+          </p>
+        </div>
       </div>
+
       {/* Blog Section */}
       <div className="container mx-auto py-10 px-4">
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Main Blog Content */}
-          <div className="col-span-12 lg:col-span-9 space-y-8">
-            {/* Blog Post */}
+          <div className="lg:col-span-9 space-y-8">
             {[
               {
                 id: 1,
@@ -50,23 +58,20 @@ export default function BlogPage() {
                 key={post.id}
                 className="bg-white shadow-md rounded-md overflow-hidden"
               >
-                {/* Blog Image */}
                 <Image
                   src={post.image}
                   alt={post.title}
                   width={800}
                   height={400}
-                  className="w-full h-[400px] object-cover"
+                  className="w-full h-auto object-cover"
                 />
-
-                {/* Blog Content */}
                 <div className="p-6">
-                  <div className="flex items-center gap-4 mb-4 text-gray-500 text-sm">
+                  <div className="flex flex-wrap items-center gap-2 text-gray-500 text-sm mb-4">
                     <span>👤 Admin</span>
                     <span>📅 {post.date}</span>
                     <span>📂 {post.category}</span>
                   </div>
-                  <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                  <h2 className="text-lg sm:text-xl font-bold text-gray-800 mb-4">
                     {post.title}
                   </h2>
                   <p className="text-gray-600 mb-4">
@@ -75,7 +80,7 @@ export default function BlogPage() {
                     corrupti iste ex incidunt? Similique odio temporibus esse
                     dignissimos voluptatum iure placeat nihil.
                   </p>
-                  <button className="px-6 py-2 bg-gray-800 text-white rounded hover:bg-gray-900">
+                  <button className="px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900">
                     Read more
                   </button>
                 </div>
@@ -100,13 +105,13 @@ export default function BlogPage() {
           </div>
 
           {/* Sidebar */}
-          <div className="col-span-12 lg:col-span-3 space-y-8">
+          <div className="lg:col-span-3 space-y-8">
             {/* Search Bar */}
             <div className="bg-white shadow-md rounded-md p-4">
               <input
                 type="text"
                 placeholder="Search categories..."
-                className="w-full px-4 py-2 border rounded-md"
+                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -168,7 +173,7 @@ export default function BlogPage() {
                       alt={post.title}
                       width={50}
                       height={50}
-                      className="w-12 h-12 object-cover"
+                      className="w-12 h-12 object-cover rounded-md"
                     />
                     <div>
                       <h4 className="text-gray-800 font-semibold">

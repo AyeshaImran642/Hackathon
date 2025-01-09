@@ -45,8 +45,20 @@ export default function Inspiration() {
               className="w-[300px] md:w-[372px] h-[400px] md:h-[486px] object-cover"
             />
           </div>
-        </div>
+          </div>
+
       </div>
+     
+<div className="w-full bg-white flex justify-center mt-10">
+  <Image
+    src="/Share.png"
+    alt="Uploaded Image"
+    width={1799}
+    height={780}
+    className="w-full h-auto"
+  />
+</div>
+
     </div>
   );
 }

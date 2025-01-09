@@ -1,41 +1,45 @@
 
 import Link from 'next/link';
 import React from 'react';
-import Navbar from '../components/navbar';
+import Navbar from '../../components/navbar';
 import Image from 'next/image';
-import FeatureSection from '../components/featuresection';
-// import Footer from '../components/Footer';
-// import Footer from '@components/Footer';
-
+import FeatureSection from '../../components/featuresection';
+import Footer from '@/components/Footer';
 
 const products = [
-  { id: 1, name: "Syltherine", description: "Stylish cafe chair", price: "Rp 2.500.000", image: "/image 1.png" },
-  { id: 2, name: "Leviosa", description: "Stylish cafe chair", price: "Rp 2.500.000", image: "/image 2.png" },
-  { id: 3, name: "Lolito", description: "Luxury big sofa", price: "Rp 7.000.000", image: "/image 3.png" },
-  { id: 4, name: "Respira", description: "Outdoor bar table and stool", price: "Rp 500.000", image: "/image 4.png" },
-  { id: 5, name: "Grifo", description: "Night lamp", price: "Rp 1.500.000", image: "/image 5.png" },
-  { id: 6, name: "Muggo", description: "Small mug", price: "Rp 1.50.000", image: "/image 6.png" },
-  { id: 7, name: "Pingky", description: "Cute bed set", price: "Rp 7.000.000", image: "/image 7.png" },
-  { id: 8, name: "Coffee", description: "Minimalist Flower Pot", price: "Rp 500.000", image: "/image 8.png" },
+  { id: 1, name: 'Syltherine', description: 'Stylish cafe chair', price: 'Rp 2.500.000', image: '/image 1.png' },
+  { id: 2, name: 'Leviosa', description: 'Stylish cafe chair', price: 'Rp 2.500.000', image: '/image 2.png' },
+  { id: 3, name: 'Lolito', description: 'Luxury big sofa', price: 'Rp 7.000.000', image: '/image 3.png' },
+  { id: 4, name: 'Respira', description: 'Outdoor bar table and stool', price: 'Rp 500.000', image: '/image 4.png' },
+  { id: 5, name: 'Grifo', description: 'Night lamp', price: 'Rp 1.500.000', image: '/image 5.png' },
+  { id: 6, name: 'Muggo', description: 'Small mug', price: 'Rp 1.500.000', image: '/image 6.png' },
+  { id: 7, name: 'Pingky', description: 'Cute bed set', price: 'Rp 7.000.000', image: '/image 7.png' },
+  { id: 8, name: 'Coffee', description: 'Minimalist Flower Pot', price: 'Rp 500.000', image: '/image 8.png' },
 ];
 
 export default function Page() {
   return (
     <div>
       <Navbar />
-      <div className="w-full flex flex-col items-center -mt-32">
+      <div className="relative w-full flex flex-col items-center">
         <Image
           src="/contact image.png"
           alt="Contact Header"
           width={1440}
           height={316}
-          className="w-full h-full object-cover"
+          layout="responsive"
+          className="object-cover"
         />
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black">Shop</h1>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black">Home &gt; Shop</p>
+        </div>
       </div>
 
       {/* Filter and Sorting Section */}
-      <div className="w-full bg-[rgba(249,241,231,1)] h-auto md:h-[100px] flex flex-col md:flex-row items-center justify-between px-4 md:px-8 py-4 md:py-0 -mt-2">
-        <div className="flex items-center space-x-4 mb-4 md:mb-0">
+      <div className="w-full bg-[rgba(249,241,231,1)] h-auto md:h-[100px] flex flex-col md:flex-row items-center justify-between px-4 md:px-8 py-4 md:py-0 my-2 -mt-1">
+        {/* Filter Controls */}
+        <div className="flex items-center mb-4 md:mb-0 space-x-4">
           <div className="flex items-center space-x-2">
             <Image
               src="/Vector.png"
@@ -46,7 +50,7 @@ export default function Page() {
             />
             <button className="border border-gray-400 px-4 py-2 rounded">Filter</button>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="hidden md:flex items-center space-x-2">
             <Image
               src="/ci_grid-big-round.png"
               alt="Grid View Icon"
@@ -62,10 +66,10 @@ export default function Page() {
               className="object-contain cursor-pointer"
             />
           </div>
-          <span>Showing 1–16 of 32 results</span>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
+        {/* Sorting and Display Controls */}
+        <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
             <label htmlFor="show" className="text-sm">Show</label>
             <input
@@ -98,6 +102,7 @@ export default function Page() {
                   alt={product.name}
                   width={285}
                   height={350}
+                  layout="responsive"
                   className="object-cover"
                 />
               </div>
@@ -125,7 +130,7 @@ export default function Page() {
         ))}
       </div>
       <FeatureSection />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

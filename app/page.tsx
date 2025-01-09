@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "./components/navbar";
-import Hero from "./components/hero";
-import Productsection from "./components/Productsection";
-import Inspiration from "./components/inspiration";
-// import Footer from '@components/Footer';
+import Navbar from "../components/navbar";
+import Hero from "../components/hero";
+import Productsection from "../components/Productsection";
+import Inspiration from "../components/inspiration";
+import Footer from '../components/Footer';
 
 export default function HomePage() {
   return (
@@ -14,8 +14,10 @@ export default function HomePage() {
         <Hero />
         <Productsection />
         <Inspiration />
-        {/* <Footer /> */}
+        <Footer />
       </main>
     </div>
   );
 }
+
+

@@ -1,19 +1,16 @@
 "use client";
 
 import React, { useState } from "react";
-import Navbar from "../../components/navbar";
+import Navbar from "../../../components/navbar";
 import Image from "next/image";
-// import Footer from '../../components/Footer';
-// import Footer from '@components/Footer';
-
-import Productsection from "../../components/Productsection";
+import Footer from "@/components/Footer";
+import ProductSection from "@/components/Productsection";
 
 // Import icons
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
-// Products array with corrected image paths and consistent prices
 const products = [
   {
     id: 1,
@@ -324,9 +321,9 @@ const ProductPage = ({ params }: { params: { productId: string } }) => {
       </div>
       <hr className="mt-9" />
       <div className="mt-12 md:mt-36">
-        <Productsection />
+        <ProductSection />
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

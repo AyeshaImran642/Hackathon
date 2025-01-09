@@ -1,22 +1,34 @@
 
+"use client"
 import React from 'react';
-import Navbar from '../components/navbar';
-// import Footer from '../components/Footer';
+import Navbar from '@/components/navbar';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function CartPage() {
-  return (
-    <div className="bg-white"> {/* White background for the whole page */}
-      <Navbar />
+  const router = useRouter();
 
-      {/* Header Image */}
-      <Image
-        src="/contact image.png"
-        alt="Cart Header"
-        width={1440}
-        height={316}
-        className="w-full h-[316px] object-cover"
-      />
+  const handleCheckoutClick = () => {
+    router.push('/checkout');
+  };
+
+  return (
+    <div className="bg-white"> 
+      <Navbar />
+<div className="relative w-full flex flex-col items-center">
+        <Image
+          src="/contact image.png"
+          alt="Contact Header"
+          width={1440}
+          height={316}
+          layout="responsive"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black">Cart</h1>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black">Home &gt; Cart</p>
+        </div>
+      </div>
 
       {/* Cart Section */}
       <div className="mt-10 flex flex-col lg:flex-row gap-6 container mx-auto px-6 lg:px-20 py-10">
@@ -32,7 +44,7 @@ export default function CartPage() {
               </tr>
             </thead>
             <tbody>
-           
+              {/* Add your cart items here */}
             </tbody>
           </table>
         </div>
@@ -41,7 +53,7 @@ export default function CartPage() {
         <div className="bg-[#FAF5F0] p-6 w-full lg:w-80">
           <h1 className="text-xl font-semibold mb-4 text-center">Cart Totals</h1>
           <div className="flex justify-center mb-2">
-            <button className="border border-black text-black py-2 px-4 rounded">Check Out</button>
+            <button onClick={handleCheckoutClick} className="border border-black text-black py-2 px-4 rounded">Check Out</button>
           </div>
         </div>
       </div>

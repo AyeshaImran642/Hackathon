@@ -39,10 +39,10 @@ export default function Navbar() {
         <div
           className={`${
             menuOpen ? "block" : "hidden"
-          } absolute top-full left-0 w-full bg-white md:static md:flex md:items-center md:justify-center`}
+          } absolute top-full left-0 w-full md:static md:flex md:items-center md:justify-center`}
         >
           {/* Navigation Links */}
-          <nav className="flex flex-col md:flex-row md:space-x-8 text-sm font-medium text-gray-700 p-4 md:p-0 items-center mx-auto">
+          <nav className="flex flex-col md:flex-row md:space-x-8 text-sm font-medium text-gray-700 md:p-3 items-center mx-auto">
             <Link href="/" className="hover:text-black transition-colors">
               Home
             </Link>
