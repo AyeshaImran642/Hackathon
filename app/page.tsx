@@ -4,7 +4,6 @@ import Hero from "../components/hero";
 import Productsection from "../components/Productsection";
 import Inspiration from "../components/inspiration";
 import Footer from '../components/Footer';
-
 export default function HomePage() {
   return (
     <div>
